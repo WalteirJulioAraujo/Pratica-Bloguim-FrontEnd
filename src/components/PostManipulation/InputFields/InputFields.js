@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ImageUrlInput from './ImageUrlInput';
 import TitleInput from './TitleInput';
 
-export default function InputFields({ title, coverUrl, onTitleChange, onCoverUrlChange }) {
+export default function InputFields({ title, coverUrl, contentPreview, onTitleChange, onCoverUrlChange, onContentPreviewChange }) {
   return (
     <Container>
       <div>
@@ -17,6 +17,9 @@ export default function InputFields({ title, coverUrl, onTitleChange, onCoverUrl
       </div>
       <div>
         <TitleInput type="text" name="title" placeholder="Title" value={title} onChange={onTitleChange} />
+      </div>
+      <div>
+        <TitleInput type="text" name="contentPreview" placeholder="Content Preview" value={contentPreview} onChange={onContentPreviewChange} />
       </div>
     </Container>
   );

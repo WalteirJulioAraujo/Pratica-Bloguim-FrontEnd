@@ -15,6 +15,8 @@ export default function PostManipulation({
   onCoverUrlChange,
   content,
   onContentChange,
+  contentPreview,
+  onContentPreviewChange,
   onPostSaveButtonClick,
   postId,
 }) {
@@ -24,6 +26,8 @@ export default function PostManipulation({
         <InputFields
           title={title}
           coverUrl={coverUrl}
+          contentPreview={contentPreview}
+          onContentPreviewChange={(e) => onContentPreviewChange(e.target.value)}
           onTitleChange={(e) => onTitleChange(e.target.value)}
           onCoverUrlChange={(e) => onCoverUrlChange(e.target.value)}
         />
